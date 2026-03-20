@@ -1,0 +1,7 @@
+torch
+transformers
+datasets
+peft
+pytorch_lightning
+wandb
+bitsandbytes

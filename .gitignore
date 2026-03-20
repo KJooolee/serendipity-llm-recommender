@@ -1,0 +1,48 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# PyTorch / Models / Checkpoints
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+best_models/
+DGRec/best_models/
+model_weights/
+
+# Data and Datasets (Large & External)
+data/
+preprocessed/
+datasets/raw/
+DGRec/datasets/
+*.csv
+*.tsv
+*.json
+*.jsonl
+*.pkl
+*.dat
+
+# Logs and Caches
+.hf_cache/
+.cache/
+wandb/
+logs/
+DGRec/logs/
+tensorboard/
+*.log
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
