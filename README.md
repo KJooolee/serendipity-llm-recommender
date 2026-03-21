@@ -27,13 +27,13 @@ Constructed specific **N-Diversity data samples** to strictly evaluate the model
 
 ## Repository Structure
 ```
-├── **train_retriever.py**: Script to train the foundational LRURec retriever models for Items and Categories.
-├── **train_ranker.py**: Script to train the LLM ranker (e.g., Llama 2) using LoRA and train the MLP projectors.
-├── **model/**: Contains model architecture definitions (LRURec, LLM wrappers, MLP Projectors).
-├── **dataloader/**: Data loading pipelines and iterators.
-├── **datasets/**: Dataset processing scripts.
-├── **trainer/**: Training loops for retrievers and text-generation LLMs.
-└── **config.py**: Configuration settings, hyper-parameters, and wandb setup.
+├── train_retriever.py: Script to train the foundational LRURec retriever models for Items and Categories.
+├── train_ranker.py: Script to train the LLM ranker (e.g., Llama 2) using LoRA and train the MLP projectors.
+├── model/: Contains model architecture definitions (LRURec, LLM wrappers, MLP Projectors).
+├── dataloader/: Data loading pipelines and iterators.
+├── datasets/: Dataset processing scripts.
+├── trainer/: Training loops for retrievers and text-generation LLMs.
+└── config.py: Configuration settings, hyper-parameters, and wandb setup.
 ```
 
 ## Getting Started
