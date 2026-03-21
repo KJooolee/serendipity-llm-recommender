@@ -10,7 +10,9 @@ This repository contains the codebase for our research on enhancing serendipity 
 
 While traditional recommendation systems like LRURec and LlamaRec excel at accuracy, they often lead to filter bubbles by repeatedly exposing users to similar content. On the other hand, diversity-focused models (e.g., DGRec, IDSR) often sacrifice overall performance to break these bubbles. Our methodology bridges this gap by leveraging both item and category preferences, extracting highly diverse yet culturally/personally relevant candidates, and ranking them using a Large Language Model (LLM).
 
+
 <img width="1140" height="639" alt="Methods" src="https://github.com/user-attachments/assets/e044cb5d-9136-4790-bafa-4abed0cfb220" />
+
 
 ### Key Contributions
 * **Phase 1. Category-aware Item Selection**: Takes **User Sequences** as input and utilizes LRURec to retrieve candidates from both an *Item Recommendation Model* and a *Category Recommendation Model*. By introducing a controllable diversity parameter `k` (number of categories) and `n` (items per category), it extracts highly diverse yet relevant candidates.
@@ -25,13 +27,13 @@ Constructed specific **N-Diversity data samples** to strictly evaluate the model
 
 ## Repository Structure
 ```
-├── train_retriever.py: Script to train the foundational LRURec retriever models for Items and Categories.
-├── train_ranker.py: Script to train the LLM ranker (e.g., Llama 2) using LoRA and train the MLP projectors.
-├── model/: Contains model architecture definitions (LRURec, LLM wrappers, MLP Projectors).
-├── dataloader/: Data loading pipelines and iterators.
-├── datasets/: Dataset processing scripts.
-├── trainer/: Training loops for retrievers and text-generation LLMs.
-└── config.py: Configuration settings, hyper-parameters, and wandb setup.
+├── **train_retriever.py**: Script to train the foundational LRURec retriever models for Items and Categories.
+├── **train_ranker.py**: Script to train the LLM ranker (e.g., Llama 2) using LoRA and train the MLP projectors.
+├── **model/**: Contains model architecture definitions (LRURec, LLM wrappers, MLP Projectors).
+├── **dataloader/**: Data loading pipelines and iterators.
+├── **datasets/**: Dataset processing scripts.
+├── **trainer/**: Training loops for retrievers and text-generation LLMs.
+└── **config.py**: Configuration settings, hyper-parameters, and wandb setup.
 ```
 
 ## Getting Started
