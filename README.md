@@ -7,7 +7,10 @@
 This repository contains the codebase for our research on enhancing serendipity and diversity in LLM-based recommendation systems without significantly compromising user preference matching.
 
 ## 📖 Overview
+
 While traditional recommendation systems like LRURec and LlamaRec excel at accuracy, they often lead to filter bubbles by repeatedly exposing users to similar content. On the other hand, diversity-focused models (e.g., DGRec, IDSR) often sacrifice overall performance to break these bubbles. Our methodology bridges this gap by leveraging both item and category preferences, extracting highly diverse yet culturally/personally relevant candidates, and ranking them using a Large Language Model (LLM).
+
+<img width="1140" height="639" alt="Methods" src="https://github.com/user-attachments/assets/e044cb5d-9136-4790-bafa-4abed0cfb220" />
 
 ## Key Contributions
 - **Phase 1. Dual Candidate Extraction & Embedding Projection**: Utilizes LRURec to build both an Item Recommendation Model and a Category Recommendation Model.
