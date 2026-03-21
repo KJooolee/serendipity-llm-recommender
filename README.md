@@ -12,19 +12,16 @@ While traditional recommendation systems like LRURec and LlamaRec excel at accur
 
 <img width="1140" height="639" alt="Methods" src="https://github.com/user-attachments/assets/e044cb5d-9136-4790-bafa-4abed0cfb220" />
 
-## Key Contributions
-- **Phase 1. Dual Candidate Extraction & Embedding Projection**: Utilizes LRURec to build both an Item Recommendation Model and a Category Recommendation Model.
-
-- **Controllable Diversity**: Introduces a diversity parameter k to select the number of user-preferred categories. Within these chosen categories, n items are extracted to form the final candidate set.
-
-- **Phase 2. LLM-based Re-Ranking**: Similar to the LlamaRec architecture, we pass both LRURec's item and category representations through an MLP projector, allowing the LLM to deeply understand both item-level and category-level characteristics simultaneously.
-
-- **Superior N-Diversity Performance**: Achieves state-of-the-art performance on the N-Diversity dataset (recommending categories the user has never interacted with), outperforming all baseline models including generic and diversity-specific recommenders.
+### Key Contributions
+* **Phase 1. Category-aware Item Selection**: Takes **User Sequences** as input and utilizes LRURec to retrieve candidates from both an *Item Recommendation Model* and a *Category Recommendation Model*. By introducing a controllable diversity parameter `k` (number of categories) and `n` (items per category), it extracts highly diverse yet relevant candidates.
+* **Phase 1. Embedding Projection**: Passes the selected item and category representations through MLP projectors to construct **Multi-Faceted Embeddings**, allowing the LLM to understand both item-level and category-level characteristics simultaneously.
+* **Phase 2. LLM-based Re-Ranking & Scoring**: Feeds the candidates with multi-faceted embeddings into the LLM for **Candidate Re-Ranking**. The resulting candidate index logits are then processed by a **Verbalizer** to calculate the final **Recommendation Scoring**.
+* **Superior N-Diversity Performance**: Achieves state-of-the-art performance on the *N-Diversity* dataset (recommending categories the user has never interacted with), outperforming all baseline models including generic and diversity-specific recommenders.
 
 ## Dataset
 Evaluated on the **Amazon Review Dataset (Toys & Games)**.
 
-Constructed specific **N-Diversity data samples** to strictly evaluate the model's ability to recommend unexplored categories outside the user's past interaction history.
+Constructed specific **N-Diversity data samples** to strictly evaluate the model's ability to recommend unexplored categories outside the User Sequences.
 
 ## Repository Structure
 ```
